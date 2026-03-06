@@ -12,7 +12,7 @@ users = [
      }
 ]
 
-client = TestClient(app)
+client = TestClient
 
 def test_get_existed_user():
     '''Получение существующего пользователя'''
