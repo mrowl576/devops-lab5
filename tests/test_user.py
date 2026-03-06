@@ -1,4 +1,4 @@
-from django.test import Client
+from fastapi.testclient import TestClient
 users = [
    {
         'id': 1,
@@ -11,6 +11,8 @@ users = [
         'email': 'p.p.petrov@mail.com',
      }
 ]
+
+client = TestClient(app)
 
 def test_get_existed_user():
     '''Получение существующего пользователя'''
