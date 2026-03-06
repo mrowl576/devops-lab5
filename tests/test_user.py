@@ -1,3 +1,4 @@
+from django.test import Client
 users = [
    {
         'id': 1,
