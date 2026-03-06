@@ -47,7 +47,7 @@ def test_create_user_with_valid_email():
     
 def test_create_user_with_invalid_email():
     '''Создание пользователя с почтой, которую использует другой пользователь'''
-    request_user_existed_enail = {
+    request_user_existed_email = {
         'name': 'Already Existed',
         'email': users[0]['email']
     }
