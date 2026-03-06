@@ -36,8 +36,8 @@ def test_get_unexisted_user():
 def test_create_user_with_valid_email():
     '''Создание пользователя с уникальной почтой'''
     request_create_user = {
-        'name': 'max'
-        'email': 'maxim@examp.com',
+        'name': 'max',
+        'email': 'maxim@examp.com'
     }
     response = client. post("/api/v1/user", json=request_create_user)
     assert resoponse.status_code == 201
