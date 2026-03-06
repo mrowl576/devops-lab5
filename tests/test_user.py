@@ -2,6 +2,8 @@ from fastapi.testclient import TestClient
 
 from src.main import app
 
+import json
+
 client = TestClient(app)
 
 # Существующие пользователи
