@@ -46,7 +46,7 @@ def test_create_user_with_valid_email():
 def test_create_user_with_invalid_email():
     '''Создание пользователя с почтой, которую использует другой пользователь'''
     request_user_existed_enail = {
-        'name': 'Already Existed".
+        'name': 'Already Existed',
         'email': users[0]['email']
     }
     response = client.post("/api/v1/user", json-request_user_existed_email)
@@ -56,8 +56,9 @@ def test_create_user_with_invalid_email():
 def test_delete_user():
     '''Удаление пользователя'''
     request_delete_user = {
-}
+
         'email': users[1]['email'],
+    }
     response = client.delete("/api/v1/user", params=request_delete_user)  
     assert response.status_code = 204
 # Проверка, что пользователь действительно удалён:
