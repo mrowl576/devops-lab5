@@ -36,8 +36,8 @@ def test_get_unexisted_user():
 def test_create_user_with_valid_email():
     '''Создание пользователя с уникальной почтой'''
     request_create_user = {
-    'name': 'max'
-    'email': 'maxim@examp.com',
+        'name': 'max'
+        'email': 'maxim@examp.com',
     }
     response = client. post("/api/v1/user", json=request_create_user)
     assert resoponse.status_code = 201
@@ -46,8 +46,8 @@ def test_create_user_with_valid_email():
 def test_create_user_with_invalid_email():
     '''Создание пользователя с почтой, которую использует другой пользователь'''
     request_user_existed_enail = {
-         'name': 'Already Existed".
-         'email': users[0]['email']
+        'name': 'Already Existed".
+        'email': users[0]['email']
     }
     response = client.post("/api/v1/user", json-request_user_existed_email)
     assert response.status_code=409
@@ -57,7 +57,7 @@ def test_delete_user():
     '''Удаление пользователя'''
     request_delete_user = {
 }
-    'email': users[1]['email'],
+        'email': users[1]['email'],
     response = client.delete("/api/v1/user", params=request_delete_user)  
     assert response.status_code = 204
 # Проверка, что пользователь действительно удалён:
