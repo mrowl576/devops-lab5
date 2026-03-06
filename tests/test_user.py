@@ -41,7 +41,7 @@ def test_create_user_with_valid_email():
         'name': 'max',
         'email': 'maxim@examp.com'
     }
-    response = client. post("/api/v1/user", json=request_create_user)
+    response = client. post("/api/v1/user", params=request_create_user)
     assert response.status_code == 201
     assert isinstance(response.json(), int)
     
